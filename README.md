@@ -1,114 +1,103 @@
-# Project-LOOP
-AI Customer Feedback Intelligence Platform
-Project LOOP is an AI-powered customer feedback intelligence platform that enables businesses to collect, organize, and analyze customer feedback from multiple channels in one centralized system. Leveraging advanced AI capabilities, it automatically classifies sentiment, identifies recurring themes, detects emerging trends, and generates actionable insights to help organizations understand customer needs more effectively.
+# Project LOOP
 
-Built as a secure, multi-tenant SaaS application, the platform features role-based access control, interactive analytics dashboards, AI-powered question answering, and automated Voice-of-Customer reports. Project LOOP empowers product, support, and leadership teams to make faster, data-driven decisions by transforming raw customer feedback into meaningful business intelligence.
+**Customer feedback intelligence, in focus.** Project LOOP is a responsive React demo that brings multi-channel customer feedback into one workspace, highlights sentiment and themes, and helps teams explore evidence-backed product opportunities.
 
+> **MVP scope:** This is a frontend-only demo backed by sample data and browser `localStorage`. AI classification, Ask LOOP answers, and report generation are explicitly simulated. No account credentials, external AI service, API key, or production backend is required or included.
 
-# Project LOOP — AI Customer Feedback Intelligence Platform
+## Demo
 
-> **Zidio Internship Project Brief & Corporate-Grade Web Application**  
-> *Ingest multi-channel customer feedback, classify sentiment with AI, cluster emerging themes, perform grounded retrieval Q&A, and generate Voice-of-Customer executive digests.*
+Select a role on the welcome screen. No password is needed. Switch roles at any time from the top-right role selector.
 
----
+| Role | Demo user | Email | Access |
+| --- | --- | --- | --- |
+| **ADMIN** | Sarah Connor | `sarah.admin@acme.com` | All views, ingestion, triage, workspace demo users |
+| **ANALYST** | Mark Watney | `mark.analyst@acme.com` | Ingestion, triage, reports, insights |
+| **VIEWER** | Alex Mercer | `alex.viewer@acme.com` | Read-only access to feedback and insights |
 
-## 🌟 Executive Overview
+These names and email addresses identify local demo personas only; there is no password or real authentication.
 
-**Project LOOP** is a multi-tenant SaaS web application built for product managers, support leads, and founders to transform scattered feedback into evidence-backed product decisions. 
+## Features
 
-Instead of letting feedback rot in spreadsheets and support tickets, LOOP ingests items from Zendesk, App Stores, Sales Calls, NPS Surveys, and CSV files. The embedded AI engine classifies sentiment, extracts recurring themes, flags spiking issues (+171% WoW), enables plain-English RAG Q&A with verbatim citations, and generates leadership-ready VoC digests.
+- **Overview dashboard:** KPI cards, sentiment distribution, feedback trend, top themes, recent customer voices, and a highlighted emerging issue.
+- **Feedback inbox:** Search by feedback, customer, theme, or ID; filter by sentiment, status, and source; inspect details and classification confidence; update triage status when permitted.
+- **Ingestion:** Add individual feedback with a source and optional customer name, or import CSV files with a `feedback`/`text`/`comment` column and optional `customer` and `source` columns. A downloadable CSV template is included.
+- **Ask LOOP:** Try suggested questions or ask your own. The demo responds with local keyword matching and citations to relevant sample or locally added feedback.
+- **Voice of Customer reports:** Generate an executive-style sentiment and theme digest with representative feedback quotes; export it as a plain-text report.
+- **Prioritization matrix:** Explore feedback by illustrative customer impact and sentiment, with a ranked focus list and feedback detail links.
+- **Role-based demo UX:** Admin, analyst, and viewer permissions control navigation, ingestion, and status changes. This is a UI demonstration, not server-side security.
+- **Responsive layout:** Desktop dashboard and mobile navigation, with no real backend required.
 
----
+The sample dashboard includes illustrative aggregate metrics to make the demo feel populated. Inbox items and any feedback you add are local demo records; displayed trends and prioritization scores are not live analytics.
 
-## 🛠️ Technology Stack
+## Technology
 
-| Layer | Technology | Purpose |
-| :--- | :--- | :--- |
-| **Framework** | React 18 (TypeScript) + Vite | Type-safe, blazingly fast SPA rendering & state management |
-| **Styling** | Tailwind CSS + Lucide Icons + Glassmorphic Tokens | Enterprise dark/light responsive design system |
-| **Data Visualization** | Recharts | Interactive sentiment donuts, timeline velocity, and prioritization scatter matrix |
-| **AI Intelligence** | Claude AI / Custom Classification & RAG | Structured JSON auto-classification, grounded vector Q&A, and VoC report generator |
-| **Architecture** | Multi-Tenant Workspace & RBAC | Strict workspace data isolation + Admin, Analyst, Viewer role permissions |
+- React 18 + TypeScript + Vite
+- Tailwind CSS configuration and custom responsive design tokens/styles
+- Lucide React icons
+- Recharts visualizations
+- ESLint flat config
 
----
+## Local setup
 
-## 🔑 Demo Login Credentials (RBAC Testing)
+Prerequisites: Node.js 18 or newer and npm.
 
-Project LOOP features built-in multi-tenant workspace isolation and live role switching via the top Navbar:
-
-| Role | Demo User | Email | Permissions |
-| :--- | :--- | :--- | :--- |
-| **ADMIN** | Sarah Connor | `sarah.admin@acme.com` | Full access: Ingest data, reclassify AI tags, manage team members, configure webhooks & API keys |
-| **ANALYST** | Mark Watney | `mark.analyst@acme.com` | Core access: Ingest single/CSV feedback, triage inbox statuses, reclassify, generate VoC reports |
-| **VIEWER** | Alex Mercer | `alex.viewer@acme.com` | Read-Only: Explore dashboards, inspect feedback details, view reports & prioritization matrix |
-
----
-
-## ⚡ Quick Start & Local Setup Instructions
-
-### Prerequisites
-- Node.js 18 LTS or newer
-- npm / yarn / pnpm
-
-### 1. Clone & Install Dependencies
 ```bash
-git clone https://github.com/your-username/project-loop.git
-cd project-loop
 npm install
-```
-
-### 2. Environment Configuration
-Create a `.env` file in the root directory (optional for local mock AI engine):
-```env
-VITE_APP_TITLE="Project LOOP - AI Feedback Intelligence"
-VITE_ANTHROPIC_API_KEY="your_optional_claude_api_key"
-```
-
-### 3. Run Development Server
-```bash
 npm run dev
 ```
-Open **[http://localhost:5173](http://localhost:5173)** in your browser.
 
-### 4. Build for Production
+Open the local URL printed by Vite (normally <http://localhost:5173>).
+
+### Checks and production preview
+
 ```bash
+npm run lint
 npm run build
+npm run preview
 ```
 
----
+The production bundle is written to `dist/`. No `.env` file is needed. Do not add real credentials to frontend environment variables: values prefixed with `VITE_` are bundled into client-side code and are not secret.
 
-## 📐 System Architecture & Data Flow
+## Deployment
 
+The static Vite build can be hosted by Vercel, Netlify, GitHub Pages (with the appropriate Vite `base` setting for a project subpath), or any static web host:
+
+1. Connect the repository to your hosting provider.
+2. Use `npm run build` as the build command.
+3. Publish the `dist` directory.
+
+For Vercel CLI, run `npx vercel` in the repository and follow its prompts. The demo has no API server, database, authentication service, or AI provider; deployment publishes the frontend only. User-added feedback is saved in browser-local storage and is not shared across browsers or users.
+
+## Screenshots
+
+Screenshots are intentionally not checked in yet. To capture current UI for a submission, run `npm run dev`, open the app at desktop and mobile widths, and capture:
+
+1. Role selection / welcome screen.
+2. Overview dashboard with charts and recent feedback.
+3. Feedback inbox with filters and an opened detail drawer.
+4. Ask LOOP answer with citations.
+5. VoC report and prioritization matrix.
+
+Save approved captures under `docs/screenshots/` and update this section with the final image paths before submitting. Use demo data only; do not include customer-identifying or secret information.
+
+## Project structure
+
+```text
+src/
+  App.tsx       Demo login, application shell, screens, and interactions
+  data.ts       Demo personas, sample feedback, and local classifier
+  main.tsx      React entry point
+  styles.css    Responsive application styling
 ```
-[ Feedback Ingestion Sources ] 
- (Zendesk, App Store, CSV, Webhook, Sales Calls)
-                   │
-                   ▼
- [ Project LOOP Engine (Multi-Tenant Scope) ]
-   ├── AI Auto-Classifier (Sentiment: POS/NEU/NEG, Score -1..1, Feature Area)
-   ├── Theme Clustering & Spike Anomaly Detector (+171% WoW)
-   ├── Vector Embedding Store & RAG Retrieval Engine
-   └── VoC Executive Report Generator
-                   │
-                   ▼
- [ Interactive Executive Dashboard & Q&A Copilot ]
-   ├── Ask LOOP AI (Retrieval-Grounded Q&A with Citations)
-   ├── Triage Inbox (NEW -> REVIEWED -> ACTIONED)
-   └── Prioritization Matrix (Impact vs Negativity)
-```
 
----
+## Current limitations
 
-## 🚀 One-Command Vercel Live Deployment
+- Role-based access is client-side and intended only to demonstrate user flows; it is not authorization for a real multi-tenant service.
+- AI labels and answers use local heuristic matching. Citations are selected from the browser's demo feedback data, not a vector database or external model.
+- CSV support is intentionally simple and designed for small, ordinary CSV exports; it is not a robust ETL pipeline.
+- Data persistence is local to the browser. Clearing site data resets the demo to its sample state.
+- No live webhook, support-platform connector, team management, or secrets management is configured.
 
-To deploy Project LOOP to Vercel:
-```bash
-npm install -g vercel
-vercel
-```
-Select default settings. Vercel will auto-detect Vite and deploy a public URL.
+## License
 
-
-
-
-
+See [LICENSE](LICENSE).
