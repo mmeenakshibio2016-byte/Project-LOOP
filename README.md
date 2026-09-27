@@ -4,6 +4,14 @@
 
 > **MVP scope:** This is a frontend-only demo backed by sample data and browser `localStorage`. AI classification, Ask LOOP answers, and report generation are explicitly simulated. No account credentials, external AI service, API key, or production backend is required or included.
 
+## Live demo and walkthrough
+
+- **Live demo:** [Project LOOP on Vercel](https://temporary-snappy-drizzle-easpqly.vercel.app/)
+- **Demo video:** [Watch or download the 28-second walkthrough](docs/media/project-loop-demo.mp4)
+- **Project report:** [Read the verification and delivery report](docs/PROJECT-REPORT.md)
+
+The Vercel project is connected to this GitHub repository. The `main` production deployment was verified on September 27, 2026. Use the project-domain link above; Vercel's deployment-specific URL may require an authenticated project session.
+
 ## Demo
 
 Select a role on the welcome screen. No password is needed. Switch roles at any time from the top-right role selector.
@@ -70,15 +78,23 @@ For Vercel CLI, run `npx vercel` in the repository and follow its prompts. The d
 
 ## Screenshots
 
-Screenshots are intentionally not checked in yet. To capture current UI for a submission, run `npm run dev`, open the app at desktop and mobile widths, and capture:
+Screenshots are captured from the working demo at 1280 × 720. Sample data is used throughout.
 
-1. Role selection / welcome screen.
-2. Overview dashboard with charts and recent feedback.
-3. Feedback inbox with filters and an opened detail drawer.
-4. Ask LOOP answer with citations.
-5. VoC report and prioritization matrix.
+| Welcome | Overview |
+| --- | --- |
+| ![Role selection screen](docs/screenshots/welcome.png) | ![Analytics overview dashboard](docs/screenshots/overview.png) |
 
-Save approved captures under `docs/screenshots/` and update this section with the final image paths before submitting. Use demo data only; do not include customer-identifying or secret information.
+| Feedback inbox | Feedback detail |
+| --- | --- |
+| ![Feedback inbox with filters](docs/screenshots/feedback-inbox.jpg) | ![Feedback detail drawer](docs/screenshots/feedback-detail.jpg) |
+
+| Ask LOOP | Feedback ingestion |
+| --- | --- |
+| ![Simulated Ask LOOP answer with citations](docs/screenshots/ask-loop.jpg) | ![CSV and manual feedback ingestion](docs/screenshots/ingestion.jpg) |
+
+| Voice of Customer report | Prioritization matrix |
+| --- | --- |
+| ![Generated Voice of Customer report](docs/screenshots/voc-report.jpg) | ![Feedback prioritization matrix](docs/screenshots/prioritization.jpg) |
 
 ## Project structure
 
@@ -101,4 +117,3 @@ src/
 ## License
 
 See [LICENSE](LICENSE).
-https://vercel.com/claim-deployment?code=5bbff4ad-465b-4de3-bff0-7dcca8c1f02d
