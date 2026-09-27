@@ -101,3 +101,4 @@ src/
 ## License
 
 See [LICENSE](LICENSE).
+https://vercel.com/claim-deployment?code=5bbff4ad-465b-4de3-bff0-7dcca8c1f02d
