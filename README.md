@@ -8,11 +8,14 @@
 
 - **Live demo:** [Project LOOP on Vercel](https://temporary-snappy-drizzle-easpqly.vercel.app/)
 - **Demo video:** [Download the 28-second walkthrough with original music and sound effects](docs/media/project-loop-demo-with-sound.mp4)
+- **Feedback reflection guide:** [Open the captioned 44-second guide and speak your own narration](docs/media/project-loop-feedback-reflection-guide.mp4)
 - **Submission bundle:** [Download the report PDF and demo video together](docs/media/project-loop-submission.zip)
 - **PDF report:** [Download the formatted project report](docs/PROJECT-REPORT.pdf)
 - **Project report:** [Read the verification and delivery report](docs/PROJECT-REPORT.md)
 
-Direct downloads for submission: [PDF report](https://raw.githubusercontent.com/mmeenakshibio2016-byte/Project-LOOP/mmeenakshibio2016-byte-build-loop-mvp/docs/PROJECT-REPORT.pdf) · [Video with sound](https://raw.githubusercontent.com/mmeenakshibio2016-byte/Project-LOOP/mmeenakshibio2016-byte-build-loop-mvp/docs/media/project-loop-demo-with-sound.mp4) · [All-in-one ZIP bundle](https://raw.githubusercontent.com/mmeenakshibio2016-byte/Project-LOOP/mmeenakshibio2016-byte-build-loop-mvp/docs/media/project-loop-submission.zip).
+The reflection guide has captions and a soft music bed, but no generated speech; record yourself speaking the reflection before submitting it as your feedback video.
+
+Direct downloads for submission: [PDF report](https://raw.githubusercontent.com/mmeenakshibio2016-byte/Project-LOOP/mmeenakshibio2016-byte-build-loop-mvp/docs/PROJECT-REPORT.pdf) · [Demo walkthrough with sound](https://raw.githubusercontent.com/mmeenakshibio2016-byte/Project-LOOP/mmeenakshibio2016-byte-build-loop-mvp/docs/media/project-loop-demo-with-sound.mp4) · [Feedback reflection guide](https://raw.githubusercontent.com/mmeenakshibio2016-byte/Project-LOOP/mmeenakshibio2016-byte-build-loop-mvp/docs/media/project-loop-feedback-reflection-guide.mp4) · [All-in-one ZIP bundle](https://raw.githubusercontent.com/mmeenakshibio2016-byte/Project-LOOP/mmeenakshibio2016-byte-build-loop-mvp/docs/media/project-loop-submission.zip).
 
 The Vercel project is connected to this GitHub repository. The `main` production deployment was verified on September 27, 2026. Use the project-domain link above; Vercel's deployment-specific URL may require an authenticated project session.
 
