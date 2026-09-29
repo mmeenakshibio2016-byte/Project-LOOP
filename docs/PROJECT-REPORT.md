@@ -3,7 +3,10 @@
 **Report date:** September 27, 2026
 **Repository:** [mmeenakshibio2016-byte/Project-LOOP](https://github.com/mmeenakshibio2016-byte/Project-LOOP)
 **Production demo:** [temporary-snappy-drizzle-easpqly.vercel.app](https://temporary-snappy-drizzle-easpqly.vercel.app/)
-**Walkthrough:** [Project LOOP demo video (MP4, 1280 x 720)](media/project-loop-demo.mp4)
+**Downloads:** [Formatted report (PDF)](PROJECT-REPORT.pdf) | [Submission bundle (ZIP)](media/project-loop-submission.zip)
+**Walkthrough:** [Download the demo video with original music and sound effects (MP4, 1280 x 720)](media/project-loop-demo-with-sound.mp4)
+
+**Direct public downloads:** [PDF](https://raw.githubusercontent.com/mmeenakshibio2016-byte/Project-LOOP/mmeenakshibio2016-byte-build-loop-mvp/docs/PROJECT-REPORT.pdf) | [Sound-enhanced MP4](https://raw.githubusercontent.com/mmeenakshibio2016-byte/Project-LOOP/mmeenakshibio2016-byte-build-loop-mvp/docs/media/project-loop-demo-with-sound.mp4) | [Submission ZIP](https://raw.githubusercontent.com/mmeenakshibio2016-byte/Project-LOOP/mmeenakshibio2016-byte-build-loop-mvp/docs/media/project-loop-submission.zip)
 
 ## Executive summary
 
@@ -24,7 +27,7 @@ The merged app is deployed to Vercel from the `main` branch. The public project-
 
 ## Demo video and screenshots
 
-The walkthrough is a screen recording of the running React application. It covers the dashboard, feedback inbox and detail, Ask LOOP, ingestion, report generation, the prioritization matrix, and viewer-mode inbox. It begins with the role-selector screen.
+The walkthrough is a screen recording of the running React application with an original, softly mixed electronic music bed and subtle interface-style transition accents. It covers the dashboard, feedback inbox and detail, Ask LOOP, ingestion, report generation, the prioritization matrix, and viewer-mode inbox. It begins with the role-selector screen.
 
 | Screen | Capture |
 | --- | --- |

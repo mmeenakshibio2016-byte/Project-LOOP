@@ -1,0 +1,19 @@
+PROJECT LOOP - FEEDBACK REFLECTION
+
+Read this script naturally while recording your own voice. The captioned video
+is approximately 44 seconds long and contains no spoken narration.
+
+Hello, friends. Project LOOP helps teams organize customer feedback and decide
+what to improve.
+
+I built a lightweight, rule-based classifier to suggest sentiment and themes,
+so new feedback is easier to sort.
+
+Creating the inbox, cited answers, and reports taught me to turn feedback into
+actionable insight.
+
+A challenge was building a realistic demo without a backend or live artificial
+intelligence. I used sample data and clearly labeled simulations.
+
+I learned automation saves time, but people must verify insights. Next, I would
+add secure login, shared storage, and a real AI service. Thank you.
